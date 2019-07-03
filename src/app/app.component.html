@@ -1,0 +1,17 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <div id="frame" style="text-align: left; width: 300px; height: 200px; overflow: hidden" (mousemove)="mouseIn($event)" (mouseout)="mouseOut($event)" (onScroll)="scrollUp($event)">
+    <img id="imgtst" width="300" alt="Angular Logo" src="../assets/Oliwa Park - Wallpaper.jpg" >
+  </div>
+
+  <button (click)="zoomMinus()">-</button>
+  <input type="text" name="userInput" [(ngModel)]="userInput" (ngModelChange)="getInput()"/>
+  <button (click)="zoomPlus()">+</button>
+
+  <p>
+    {{zoomAmount}}
+  </p>
+</div>
